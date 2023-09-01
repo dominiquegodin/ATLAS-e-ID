@@ -57,7 +57,7 @@ This is a TensorFlow framework for the identification of ATLAS electrons by usin
    ```
 5) enter framework directory
    ```
-   cd el_classifier
+   cd cd ATLAS-e-ID
    ```
 6) File sharing is usually not possible on beluga. So you might need to secure copy the data files and singularity image files from lps to your own directories. Here's a nice tutorial on secure copy:
     ```
@@ -69,6 +69,10 @@ This is a TensorFlow framework for the identification of ATLAS electrons by usin
 1) run classifier.sh script and send jobs to Slurm batch system (This will run the command in classifier.sh)
    ```
    sbatch sbatch.sh
+   ```
+ Sur LPS il peut être nécessaire de spécifier la machine à utiliser (certains fichiers d'entraînement sont uniquement disponible sur atlas16) :
+   ```
+   sbatch -w atlas16 sbatch.sh
    ```
 2) send array jobs with ID 1 to 10 to Slurm batch system
    ```
